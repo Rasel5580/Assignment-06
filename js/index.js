@@ -49,6 +49,62 @@ const loadCat = async() => {
       catsContainer.appendChild(div);
     });
    }
+
+   // Dog Button Work.....
+const loadDog = async() => {
+    document.getElementById('spin').style.display='none';
+  
+    const response = await fetch(`https://openapi.programming-hero.com/api/peddy/category/dog`);
+    const data = await response.json();
+    displayAllDogs(data.data)
+  
+    // Filter only cats and display them
+    const cats = filterCats(data.pets);
+    displayAllCats(cats);
+  }
+    
+  const dogPets = () => {
+     document.getElementById('spin').style.display='block';
+  
+    setTimeout(function(){
+      loadDog ();
+    },2000)
+  }
+
+  // Rabbit Button Work.....
+const loadRabbit = async() => {
+    document.getElementById('spin').style.display='none';
+  
+    const response = await fetch(`https://openapi.programming-hero.com/api/peddy/category/rabbit`);
+    const data = await response.json();
+    displayAllRabbits(data.data)
+  
+    // Filter only cats and display them
+    const cats = filterCats(data.pets);
+    displayAllCats(cats);
+  }
+    
+  const rabbitPets = () => {
+     document.getElementById('spin').style.display='block';
+  
+    setTimeout(function(){
+      loadRabbit ();
+    },2000)
+  }
+
+  // Bird Button Work.....
+const loadBird = async() => {
+    document.getElementById('spin').style.display='none';
+}
+       
+  const birdPets = () => {
+     document.getElementById('spin').style.display='block';
+     
+  
+    setTimeout(function(){
+      loadBird ();
+    },2000)
+  }
   
    // Bird Button
    const displayBirds = (birds) => {
