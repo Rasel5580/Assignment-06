@@ -3,9 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Assignment-6</title>
+    <!-- daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <script src="https://kit.fontawesome.com/6ea233a941.js" crossorigin="anonymous"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Category Button -->
+       <style>
+        #spin{
+            display: none;
+        }
+        </style> 
+    
 </head>
 <body>
-    
+    <header>
+        <nav class="mx-28 mt-5">
+            <div class="navbar bg-base-100 justify-between items-center">
+                <div class="gap-2 items-center">
+                 <i class="size-6"> <img src="/B10A6-Assess-Your-Asynchronous-JS-and-ES6-skills-main/images/logo.webp" alt=""></i>
+                  <h3 class="text-2xl font-bold">Peddy</h3>
+                </div>
+                <div>
+                    <ul class="flex gap-5 text-center items-center font-semibold text-xl">
+                        <a href=""><li>Home</li></a>
+                       <a href=""> <li>Shop</li></a>
+                        <a href=""><li>Contact</li></a>
+                    </ul>
+                </div>
+                <div class="">
+                    <i class="fa-solid fa-circle-user text-4xl"></i>
+                </div>
+              </div>
+        </nav>
+    </header>
+    <main>
+        <section class=" mx-28 py-10">
+            <h4 class="text-2xl text-center font-semibold text-gray-500 py-5">Bringing Families Together <i></i></h4>
+
+            <h1 class="text-center text-5xl lg:text-6xl font-bold py-5">Your Path to Adoption <br> Starts Here</h1>
+            <p class=" pb-8 lg:px-80"> "Your Path to Adoption Starts Here" signals the beginning of a journey for those interested in adoption. It invites people to explore the process, whether domestic or international, and provides access to guidance, resources, and support. This phrase reassures prospective parents that they have a clear, supportive route to follow, with experts and helpful resources available at each step.</p>
+
+            <div class="text-center">
+                <button id="btn" class="btn bg-[#0E7A81] hover:bg-[#05595f] text-white text-lg text-center">View More</button>
+            </div>
+            
+        </section>
+        <section class="mx-28 flex justify-center">
+            <img class="" src="/B10A6-Assess-Your-Asynchronous-JS-and-ES6-skills-main/images/pet.webp" alt="">
+        </section>
+        <section class="mx-28 text-center">
+            <div>
+                <h1 class="text-4xl font-bold mt-10 pb-5">Adopt Your Best Friend</h1>
+                <p class="mb-8">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+            </div>
+
+            <!--Category button -->
+             <div class="flex justify-between space-x-20 lg:space-x-52 pb-16 pt-5">
+                <button onclick="catPets()" class="btn btn-active text-lg font-bold"><i class="size-9"><img src="/B10A6-Assess-Your-Asynchronous-JS-and-ES6-skills-main/images/cat.png"></i> Cat</button>
+                <button class="btn btn-active text-lg font-bold"><i class="size-10"><img src="/B10A6-Assess-Your-Asynchronous-JS-and-ES6-skills-main/images/australian-shepherd.png"></i> Dog</button>
+                <button class="btn btn-active text-lg font-bold"><i class="size-9"><img src="https://cdn-icons-png.flaticon.com/512/10806/10806489.png"></i> Rabbit</button>
+                <button onclick="birdPets" class="btn btn-active text-lg font-bold"><i class="size-8"><img src="/B10A6-Assess-Your-Asynchronous-JS-and-ES6-skills-main/images/bird.png"></i> Bird</button>
+             </div>
+
+            <!-- Spinner -->
+            <div id="spin">
+                <span class="loading loading-spinner loading-lg"></span>
+                </div>
+
+                <div id="catAll">
+
+                </div>
+                <div id="allBird">
+
+                </div>
+
+            <div id="adopt" class="mb-10 space-x-8 lg:space-x-40 justify-center ">
+            </div>
+            <div id="allpet" class="grid grid-cols-1 lg:grid-cols-3 "> 
+                <div id="catAll" class="grid grid-cols-1 lg:grid-cols-3 "> 
+               
+            </div>  
+        </section>
+
+    </main>
+    <footer class="bg-[#131313]">
+        <section class="mx-5 lg:mx-28 mb-10 py-10 text-white justify-between flex">
+            <div>
+                <div class="gap-2 items-center flex">
+                    <i> <img class="size-8" src="/B10A6-Assess-Your-Asynchronous-JS-and-ES6-skills-main/images/logo.webp" alt=""></i>
+                     <h3 class="text-4xl font-bold">Peddy</h3>
+                   </div>
+                   <div class="pt-5">
+                        <div class="text-lg py-5 space-y-3">
+                            <h4>Location: av. Washington 165, NY CA 54003       
+                            </h4>
+                            <h4>Phone: +31 85 964 47 25</h4>
+                            <h4>Email: info@yourdomain.com</h4>
+                            <h4>Openings hours: 9.00 AM - 5.00 PM</h4>
+                        </div>
+                        <div class="text-4xl space-x-5">
+                            <i class="fa-brands fa-facebook  text-blue-500"></i>
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <i class="fa-brands fa-youtube  text-red-600"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                   </div>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Useful Links</h3>
+                <ul class="text-lg space-y-3 text-gray-400 pt-4">
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Animals</li>
+                    <li>Foundation</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="space-y-5">
+                <h3 class="text-xl font-bold">Drop a Message</h3>
+               <div class="space-y-5 grid grid-cols-1 lg:grid-cols-1">
+                <input class="lg:w-full bg-gray-950 rounded-lg px-3 py-4" placeholder="Enter your email" type="text">
+                <button class="text-xl font-semibold text-white bg-[#0E7A81] rounded-lg px-3 py-3 lg:w-full">Subscribe</button>
+               </div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="/js/index.js"></script>
 </body>
 </html>
